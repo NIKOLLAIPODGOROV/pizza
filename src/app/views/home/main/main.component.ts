@@ -25,14 +25,6 @@ export class MainComponent implements OnInit, OnDestroy, AfterViewInit {
       this.subject.complete();
     }, 4000);
 
-
-    /*
-     this.promise = new Promise<string>(resolve => {
-       setTimeout(() => {
-         resolve('hello');
-       }, 2000);
-     });
- */
     /*
         this.observable = new Observable((observer) => {
           let count = 0;
@@ -60,13 +52,9 @@ export class MainComponent implements OnInit, OnDestroy, AfterViewInit {
 
   private subscription: Subscription | null = null;
 
-  // @ViewChild('popup')
-  // popup!:TemplateRef<ElementRef>;
-
   ngOnInit() {
-console.log(environment.production);
 
-
+    console.log(environment.production);
   //   const myModalAlternative = new bootstrap.Modal('#myModal', {});
   //   myModalAlternative.show();
 
@@ -87,7 +75,7 @@ console.log(environment.production);
   private popupComponent!: PopupComponent;
 
   ngAfterViewInit() {
-    this.popupComponent.open();
+  //  this.popupComponent.open();
   }
 
   ngOnDestroy() {
